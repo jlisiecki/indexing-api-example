@@ -1,0 +1,24 @@
+{
+  "extends": "@tsconfig/node18",
+  "ts-node": {
+    "swc": true,
+    "require": ["tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "outDir": "dist",
+    "allowJs": true,
+    "checkJs": true
+  },
+  "include": [
+    ".eslintrc.js",
+    "**/*.ts",
+    "ecosystem.config.js",
+    "prettier.config.js",
+    "webpack.config.js"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
